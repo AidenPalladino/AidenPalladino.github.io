@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aiden Palladino</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --border:#30363d;
+    --text:#e6edf3; --muted:#9aa5b1; --accent:#2ea043; --link:#58a6ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; padding:0 16px;
+  }
+  .wrap{max-width:860px; margin:0 auto; padding:64px 0}
+  header{border-bottom:1px solid var(--border); padding-bottom:28px; margin-bottom:40px}
+  h1{font-size:2.4rem; letter-spacing:-0.5px}
+  .tagline{color:var(--accent); font-weight:600; margin-top:6px}
+  .intro{color:var(--muted); margin-top:14px; max-width:620px}
+  .links{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+  .links a{
+    color:var(--link); text-decoration:none; border:1px solid var(--border);
+    padding:8px 16px; border-radius:6px; font-size:0.95rem; transition:border-color .15s
+  }
+  .links a:hover{border-color:var(--link)}
+  h2{font-size:1.4rem; margin:44px 0 18px; letter-spacing:-0.3px}
+  .card{
+    background:var(--panel); border:1px solid var(--border);
+    border-radius:8px; padding:20px 22px; margin-bottom:16px
+  }
+  .card h3{font-size:1.15rem}
+  .card h3 a{color:var(--link); text-decoration:none}
+  .card h3 a:hover{text-decoration:underline}
+  .card p{color:var(--muted); margin-top:8px; font-size:0.97rem}
+  .tags{margin-top:12px; display:flex; gap:7px; flex-wrap:wrap}
+  .tag{
+    font-size:0.78rem; color:var(--muted); background:#0d1117;
+    border:1px solid var(--border); padding:3px 9px; border-radius:20px
+  }
+  .skills{display:flex; gap:8px; flex-wrap:wrap}
+  .skills span{
+    background:var(--panel); border:1px solid var(--border);
+    padding:6px 13px; border-radius:6px; font-size:0.9rem
+  }
+  .about p{color:var(--muted)}
+  .about li{color:var(--muted); margin-left:20px; margin-top:4px}
+  footer{
+    margin-top:56px; padding-top:24px; border-top:1px solid var(--border);
+    color:var(--muted); font-size:0.9rem; text-align:center
+  }
+  footer a{color:var(--link); text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Aiden Palladino</h1>
+    <div class="tagline">Cybersecurity Student &middot; USF Bellini College</div>
+    <p class="intro">
+      Cybersecurity major graduating December 2027, focused on SOC analysis,
+      threat detection, and penetration testing. I build hands-on security
+      projects and document them so I understand every piece.
+    </p>
+    <div class="links">
+      <a href="https://github.com/AidenPalladino">GitHub</a>
+      <a href="https://linkedin.com/in/aiden-palladino">LinkedIn</a>
+      <a href="mailto:aidenpalladino@gmail.com">Email</a>
+      <a href="Aiden_Palladino_Resume.pdf">Resume</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>
+      I'm a junior at the University of South Florida's Bellini College of
+      Artificial Intelligence, Cybersecurity, and Computing (GPA 3.82, Dean's
+      List). I'm a member of the Whitehatters Computer Security Club, studying
+      for CompTIA Security+, and currently seeking a cybersecurity internship.
+      Recent highlights:
+    </p>
+    <ul>
+      <li>Placed 31st on a 3-person team in USF's Hack The Box CTF</li>
+      <li>Completed 20+ Hack The Box Academy modules and 5+ machines</li>
+      <li>Wrote a threat intelligence report on the 9002 Trojan using STIX</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3><a href="https://github.com/AidenPalladino/ssh-bruteforce-detector">SSH Brute-Force Detector</a></h3>
+      <p>A Python tool that parses Linux SSH authentication logs, counts failed
+      logins per source IP, and flags likely brute-force attackers over a set threshold.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Log Analysis</span><span class="tag">Detection</span></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/AidenPalladino/aws-vpc-web-server">AWS VPC &amp; Web Server</a></h3>
+      <p>Built a custom AWS network with public and private subnets across two
+      Availability Zones, routed traffic with an internet and NAT gateway, and
+      deployed a web server behind a least-privilege firewall.</p>
+      <div class="tags"><span class="tag">AWS</span><span class="tag">VPC</span><span class="tag">EC2</span><span class="tag">Networking</span></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/AidenPalladino/file-integrity-monitor">File Integrity Monitor</a></h3>
+      <p>A Python tool that creates a SHA-256 baseline of a folder and detects
+      added, modified, and deleted files on later scans, the way real file
+      integrity monitoring tools work.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Hashing</span><span class="tag">Blue Team</span></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/AidenPalladino/HTB-Writeups">Hack The Box Write-ups</a></h3>
+      <p>Walkthroughs of retired Hack The Box machines, documenting enumeration,
+      exploitation, and the real-world lessons behind each vulnerability.</p>
+      <div class="tags"><span class="tag">Pentesting</span><span class="tag">Nmap</span><span class="tag">Hashcat</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span><span>C / C++</span><span>Linux</span><span>Nmap</span>
+      <span>Metasploit</span><span>Wireshark</span><span>Kali Linux</span>
+      <span>Windows Event Viewer</span><span>MITRE ATT&amp;CK</span><span>STIX</span>
+      <span>AWS</span><span>Log Analysis</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>Aiden Palladino &middot; Tampa, FL &middot;
+       <a href="mailto:aidenpalladino@gmail.com">aidenpalladino@gmail.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -61,9 +61,8 @@
     <h1>Aiden Palladino</h1>
     <div class="tagline">Cybersecurity Student &middot; USF Bellini College</div>
     <p class="intro">
-      Cybersecurity student at USF graduating December 2027, focused on
-      internships in SOC, cloud, or penetration testing, where I can apply
-      my skills to real-world security challenges.
+      Cybersecurity student at USF graduating December 2027, looking for a
+      cybersecurity internship for summer 2027, mainly in SOC and threat detection.
     </p>
     <div class="links">
       <a href="https://github.com/AidenPalladino">GitHub</a>
@@ -78,65 +77,53 @@
     <p>
       I'm a junior at the University of South Florida's Bellini College of
       Artificial Intelligence, Cybersecurity, and Computing, with a 3.82 GPA
-      and Dean's List recognition. Outside of class, I'm heavily involved on
-      campus as a member of the Whitehatters Computer Security Club, where I
-      sharpen my technical skills alongside other students, and the Delta Tau
-      Delta fraternity, where I've built leadership experience and a strong
-      network. I'm also studying for my CompTIA Security+ certification. When
+      and Dean's List recognition. I'm in the ReliaQuest Security Operations Labs program this fall,
+      I'm studying for Security+, and I go to Whitehatters, USF's security club.
+      I'm also in Delta Tau Delta, where I've been Finance Chair. When
       I'm not working on cybersecurity, I spend most of my free time in the gym
       and watching sports.
     </p>
-    <p style="margin-top:12px">Some of my recent highlights include:</p>
+    <p style="margin-top:12px">Highlights:</p>
     <ul>
-      <li>Placed 31st with a three-person team in USF's Hack The Box CTF</li>
-      <li>Completed 20+ Hack The Box Academy modules and 5+ machines, gaining
-          hands-on experience with cybersecurity tools and techniques</li>
-      <li>Built and secured cloud networks in AWS using VPCs, subnets, and
-          security groups</li>
-    </ul>
+      <li>Solved 7 challenges in USF's Hack The Box CTF on a 3-person team</li>
+      <li>Completed 20+ Hack The Box Academy modules and 5+ machines</li>
+          </ul>
   </section>
 
   <section>
     <h2>Projects</h2>
-    <p style="color:var(--muted); margin:-6px 0 20px">
-      Below are some of the security projects I've built and documented.
-    </p>
     
     <div class="card">
       <h3><a href="https://github.com/AidenPalladino/suricata-ids-lab">Suricata IDS Lab</a></h3>
-      <p>Set up Suricata as an intrusion detection system, analyzed captured
-      network traffic, and wrote a custom detection rule to catch activity,
-      the detect-and-triage core of SOC work.</p>
+      <p>Ran my own captured ping and Nmap traffic through Suricata, wrote a
+      simple custom rule, and sorted the real alerts from a capture artifact.</p>
       <div class="tags"><span class="tag">Suricata</span><span class="tag">IDS</span><span class="tag">Detection</span><span class="tag">SOC</span></div>
     </div>
 
     <div class="card">
       <h3><a href="https://github.com/AidenPalladino/ssh-bruteforce-detector">SSH Brute-Force Detector</a></h3>
-      <p>A Python tool that parses Linux SSH authentication logs, counts failed
-      logins per source IP, and flags likely brute-force attackers over a set threshold.</p>
+      <p>Python script that counts failed SSH logins per IP in auth.log and
+      flags any IP with 10 or more.</p>
       <div class="tags"><span class="tag">Python</span><span class="tag">Log Analysis</span><span class="tag">Detection</span></div>
     </div>
 
     <div class="card">
       <h3><a href="https://github.com/AidenPalladino/aws-vpc-web-server">AWS VPC &amp; Web Server</a></h3>
-      <p>Built a custom AWS network with public and private subnets across two
-      Availability Zones, routed traffic with an internet and NAT gateway, and
-      deployed a web server behind a least-privilege firewall.</p>
+      <p>AWS Academy lab: a VPC with public and private subnets in two
+      Availability Zones, and a web server behind a security group that only allows HTTP.</p>
       <div class="tags"><span class="tag">AWS</span><span class="tag">VPC</span><span class="tag">EC2</span><span class="tag">Networking</span></div>
     </div>
 
     <div class="card">
       <h3><a href="https://github.com/AidenPalladino/file-integrity-monitor">File Integrity Monitor</a></h3>
-      <p>A Python tool that creates a SHA-256 baseline of a folder and detects
-      added, modified, and deleted files on later scans, the way real file
-      integrity monitoring tools work.</p>
+      <p>Python script that saves SHA-256 hashes of a folder and reports
+      added, changed, and deleted files on the next scan.</p>
       <div class="tags"><span class="tag">Python</span><span class="tag">Hashing</span><span class="tag">Blue Team</span></div>
     </div>
 
     <div class="card">
       <h3><a href="https://github.com/AidenPalladino/HTB-Writeups">Hack The Box Write-ups</a></h3>
-      <p>Walkthroughs of retired Hack The Box machines, documenting enumeration,
-      exploitation, and the real-world lessons behind each vulnerability.</p>
+      <p>Write-ups of Hack The Box machines and Academy modules, covering web exploitation, Metasploit, and password attacks.</p>
       <div class="tags"><span class="tag">Pentesting</span><span class="tag">Nmap</span><span class="tag">Hashcat</span></div>
     </div>
   </section>

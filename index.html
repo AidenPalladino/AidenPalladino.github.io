@@ -52,14 +52,25 @@
     color:var(--muted); font-size:0.9rem; text-align:center
   }
   footer a{color:var(--link); text-decoration:none}
+  .hero{display:flex; gap:24px; align-items:center}
+  .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover; border:2px solid var(--border); flex-shrink:0}
+  .outside{display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap}
+  .outside img{width:300px; max-width:100%; border-radius:8px; border:1px solid var(--border)}
+  .outside p{color:var(--muted); flex:1; min-width:240px}
+  @media (max-width:560px){ .hero{flex-direction:column; align-items:flex-start} }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
+    <div class="hero">
+    <img class="avatar" src="headshot.jpg" alt="Aiden Palladino">
+    <div>
     <h1>Aiden Palladino</h1>
     <div class="tagline">Cybersecurity Student &middot; USF Bellini College</div>
+    </div>
+    </div>
     <p class="intro">
       Cybersecurity student at USF graduating December 2027, looking for a
       cybersecurity internship for summer 2027, mainly in SOC and threat detection.
@@ -79,9 +90,7 @@
       Artificial Intelligence, Cybersecurity, and Computing, with a 3.82 GPA
       and Dean's List recognition. I'm in the ReliaQuest Security Operations Labs program this fall,
       I'm studying for Security+, and I go to Whitehatters, USF's security club.
-      I'm also in Delta Tau Delta, where I've been Finance Chair. When
-      I'm not working on cybersecurity, I spend most of my free time in the gym
-      and watching sports.
+      I'm also in Delta Tau Delta, where I've been Finance Chair.
     </p>
     <p style="margin-top:12px">Highlights:</p>
     <ul>
@@ -138,9 +147,19 @@
     </div>
   </section>
 
+  <section>
+    <h2>Outside of Class</h2>
+    <div class="outside">
+      <img src="outside-masters.jpg" alt="Aiden at Augusta National">
+      <p>Outside of cybersecurity, I've played sports my whole life, and that team
+      mindset led me to join Delta Tau Delta and become part of a great brotherhood.
+      On most days you can find me in the gym or hanging out with friends and family.</p>
+    </div>
+  </section>
+
   <footer>
     <p>Aiden Palladino &middot; Tampa, FL &middot;
-       <a href="mailto:aidenpalladino@gmail.com">aidenpalladino@gmail.com</a></p>
+       <a href="mailto:aidenpalladino@usf.edu">aidenpalladino@usf.edu</a></p>
   </footer>
 
 </div>

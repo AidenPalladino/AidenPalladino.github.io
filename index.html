@@ -6,102 +6,113 @@
 <title>Aiden Palladino</title>
 <style>
   :root{
-    --bg:#0d1117; --panel:#161b22; --border:#30363d;
-    --text:#e6edf3; --muted:#9aa5b1; --accent:#2ea043; --link:#58a6ff;
+    --bg:#0a0f16; --panel:#0e1722; --border:#1b2a3a;
+    --text:#e6edf3; --muted:#9fb3c8; --accent:#39d0d8; --accent2:#1f6feb; --link:#56d4dd;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
-    background:var(--bg); color:var(--text);
+    background:radial-gradient(1200px 400px at 50% -100px,#0c1a28 0,var(--bg) 70%);
+    color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6; padding:0 16px;
+    line-height:1.6; padding:0 16px; min-height:100vh;
   }
-  .wrap{max-width:860px; margin:0 auto; padding:64px 0}
-  header{border-bottom:1px solid var(--border); padding-bottom:28px; margin-bottom:40px}
-  h1{font-size:2.4rem; letter-spacing:-0.5px}
-  .tagline{color:var(--accent); font-weight:600; margin-top:6px}
-  .intro{color:var(--muted); margin-top:14px; max-width:620px}
-  .links{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+  .wrap{max-width:880px; margin:0 auto; padding:40px 0 64px}
+  .masthead{text-align:center; padding:28px 0 6px}
+  .masthead h1{font-size:2.8rem; letter-spacing:-1px; font-weight:700}
+  .role{color:var(--accent); font-weight:600; margin-top:6px; font-size:1.05rem}
+  .links{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
   .links a{
     color:var(--link); text-decoration:none; border:1px solid var(--border);
-    padding:8px 16px; border-radius:6px; font-size:0.95rem; transition:border-color .15s
+    background:var(--panel); padding:8px 18px; border-radius:6px; font-size:0.9rem;
+    font-weight:600; letter-spacing:.3px; transition:border-color .15s,color .15s
   }
-  .links a:hover{border-color:var(--link)}
-  h2{font-size:1.4rem; margin:44px 0 18px; letter-spacing:-0.3px}
+  .links a:hover{border-color:var(--accent); color:var(--accent)}
+  .intro{color:var(--muted); margin:26px auto 0; max-width:640px; text-align:center}
+  h2{
+    font-size:1.35rem; margin:44px 0 18px; letter-spacing:-0.3px;
+    padding-left:12px; border-left:3px solid var(--accent)
+  }
   .card{
     background:var(--panel); border:1px solid var(--border);
-    border-radius:8px; padding:20px 22px; margin-bottom:16px
+    border-radius:8px; padding:20px 22px; margin-bottom:14px;
+    transition:border-color .15s,transform .15s
   }
-  .card h3{font-size:1.15rem}
+  .card:hover{border-color:var(--accent); transform:translateY(-2px)}
+  .card h3{font-size:1.12rem}
   .card h3 a{color:var(--link); text-decoration:none}
   .card h3 a:hover{text-decoration:underline}
-  .card p{color:var(--muted); margin-top:8px; font-size:0.97rem}
+  .card p{color:var(--muted); margin-top:8px; font-size:0.96rem}
   .tags{margin-top:12px; display:flex; gap:7px; flex-wrap:wrap}
   .tag{
-    font-size:0.78rem; color:var(--muted); background:#0d1117;
-    border:1px solid var(--border); padding:3px 9px; border-radius:20px
+    font-size:0.76rem; color:var(--accent); background:#0c1b24;
+    border:1px solid #214451; padding:3px 10px; border-radius:20px
   }
   .skills{display:flex; gap:8px; flex-wrap:wrap}
   .skills span{
     background:var(--panel); border:1px solid var(--border);
-    padding:6px 13px; border-radius:6px; font-size:0.9rem
+    padding:6px 13px; border-radius:6px; font-size:0.88rem; color:var(--muted)
   }
+  .about{display:flex; gap:24px; align-items:flex-start}
+  .avatar{width:110px; height:110px; border-radius:50%; object-fit:cover; border:2px solid var(--accent); flex-shrink:0}
+  .about .body{flex:1; min-width:240px}
   .about p{color:var(--muted)}
   .about li{color:var(--muted); margin-left:20px; margin-top:4px}
+  .outside{display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap}
+  .outside img{width:300px; max-width:100%; border-radius:8px; border:1px solid var(--border)}
+  .outside p{color:var(--muted); flex:1; min-width:240px}
   footer{
     margin-top:56px; padding-top:24px; border-top:1px solid var(--border);
     color:var(--muted); font-size:0.9rem; text-align:center
   }
   footer a{color:var(--link); text-decoration:none}
-  .hero{display:flex; gap:24px; align-items:center}
-  .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover; border:2px solid var(--border); flex-shrink:0}
-  .outside{display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap}
-  .outside img{width:300px; max-width:100%; border-radius:8px; border:1px solid var(--border)}
-  .outside p{color:var(--muted); flex:1; min-width:240px}
-  @media (max-width:560px){ .hero{flex-direction:column; align-items:flex-start} }
+  @media (max-width:560px){ .about{flex-direction:column; align-items:center; text-align:center} }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <div class="hero">
-    <img class="avatar" src="headshot.jpg" alt="Aiden Palladino">
-    <div>
+  <header class="masthead">
     <h1>Aiden Palladino</h1>
-    <div class="tagline">Cybersecurity Student &middot; USF Bellini College</div>
-    </div>
-    </div>
-    <p class="intro">
-      Cybersecurity student at USF graduating December 2027, looking for a
-      cybersecurity internship for summer 2027, mainly in SOC and threat detection.
-    </p>
-    <div class="links">
-      <a href="https://github.com/AidenPalladino">GitHub</a>
-      <a href="https://linkedin.com/in/aiden-palladino">LinkedIn</a>
-      <a href="mailto:aidenpalladino@usf.edu">Email</a>
-      <a href="Aiden_Palladino_Resume.pdf">Resume</a>
-    </div>
+    <p class="role">Cybersecurity Student &middot; SOC &amp; Security Operations</p>
   </header>
 
-  <section class="about">
+  <div class="links">
+    <a href="https://github.com/AidenPalladino">GitHub</a>
+    <a href="https://linkedin.com/in/aiden-palladino">LinkedIn</a>
+    <a href="mailto:aidenpalladino@usf.edu">Email</a>
+    <a href="Aiden_Palladino_Resume.pdf">Resume</a>
+  </div>
+
+  <p class="intro">
+    Cybersecurity student at USF graduating December 2027, looking for a
+    cybersecurity internship for summer 2027, mainly in SOC and threat detection.
+  </p>
+
+  <section>
     <h2>About</h2>
-    <p>
-      I'm a junior at the University of South Florida's Bellini College of
-      Artificial Intelligence, Cybersecurity, and Computing, with a 3.82 GPA
-      and Dean's List recognition. I'm in the ReliaQuest Security Operations Labs program this fall,
-      I'm studying for Security+, and I go to Whitehatters, USF's security club.
-      I'm also in Delta Tau Delta, where I've been Finance Chair.
-    </p>
-    <p style="margin-top:12px">Highlights:</p>
-    <ul>
-      <li>Solved 7 challenges in USF's Hack The Box CTF on a 3-person team</li>
-      <li>Completed 20+ Hack The Box Academy modules and 5+ machines</li>
-          </ul>
+    <div class="about">
+      <img class="avatar" src="headshot.jpg" alt="Aiden Palladino">
+      <div class="body">
+        <p>
+          I'm a junior at the University of South Florida's Bellini College of
+          Artificial Intelligence, Cybersecurity, and Computing, with a 3.82 GPA
+          and Dean's List recognition. I'm in the ReliaQuest Security Operations Labs program this fall,
+          I'm studying for Security+, and I go to Whitehatters, USF's security club.
+          I'm also in Delta Tau Delta, where I've been Finance Chair.
+        </p>
+        <p style="margin-top:12px">Highlights:</p>
+        <ul>
+          <li>Solved 7 challenges in USF's Hack The Box CTF on a 3-person team</li>
+          <li>Completed 20+ Hack The Box Academy modules and 5+ machines</li>
+          <li>Completed Deloitte's Cyber Job Simulation (Forage)</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>Projects</h2>
-    
+
     <div class="card">
       <h3><a href="https://github.com/AidenPalladino/aws-labs">AWS Labs</a></h3>
       <p>Three separate AWS Academy labs: building a VPC with a web server,
